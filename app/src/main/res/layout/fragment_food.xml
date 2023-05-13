@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FoodFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutFood"
+        android:layout_width="match_parent"
+        android:layout_height="560dp">
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="15dp"
+            android:paddingLeft="40px"
+            android:text="@string/date"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toStartOf="@+id/foodDateToDisplay"
+            app:layout_constraintHorizontal_bias="0.285"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <DatePicker
+            android:id="@+id/foodDateToDisplay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="59dp"
+            android:calendarViewShown="false"
+            android:datePickerMode="spinner"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/date"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/typefood"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="187dp"
+            android:layout_marginEnd="3dp"
+            android:paddingLeft="40px"
+            android:text="@string/type"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toStartOf="@+id/typefoodlinearLayout"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/date" />
+
+        <LinearLayout
+            android:id="@+id/typefoodlinearLayout"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="4dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/typefood"
+            app:layout_constraintTop_toBottomOf="@+id/foodDateToDisplay">
+
+            <Spinner
+                android:id="@+id/typefood_spinner_id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:entries="@array/array2" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/editfoodTextNumber"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/typefood_items"
+            app:layout_constraintTop_toBottomOf="@+id/typefoodlinearLayout" />
+
+        <TextView
+            android:id="@+id/typefood_note"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="20dp"
+            android:paddingLeft="40px"
+            android:text="@string/note"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toStartOf="@+id/typefoodsTextMultiLine"
+            app:layout_constraintHorizontal_bias="0.009"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/typefood_items" />
+
+        <Button
+            android:id="@+id/btnfood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="132dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="132dp"
+            android:backgroundTint="#FF5722"
+            android:text="@string/btnFood"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/typefoodsTextMultiLine" />
+
+        <TextView
+            android:id="@+id/typefood_items"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="20dp"
+            android:paddingLeft="40px"
+            android:text="@string/cost"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toStartOf="@+id/editfoodTextNumber"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/typefood" />
+
+        <EditText
+            android:id="@+id/typefoodsTextMultiLine"
+            android:layout_width="302dp"
+            android:layout_height="101dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="4dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/typefood_note"
+            app:layout_constraintTop_toBottomOf="@+id/editfoodTextNumber" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
+</ScrollView>

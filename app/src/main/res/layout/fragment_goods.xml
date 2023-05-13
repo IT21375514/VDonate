@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".GoodsFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutGoods"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/uploadImage"
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/uploadimg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/typegoods"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="40px"
+            android:text="@string/typegoods"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toStartOf="@+id/typegoodslinearLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/uploadImage" />
+
+        <LinearLayout
+            android:id="@+id/typegoodslinearLayout"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="4dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/typegoods"
+            app:layout_constraintTop_toBottomOf="@+id/uploadImage">
+
+            <Spinner
+                android:id="@+id/typegoods_spinner_id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:entries="@array/array3" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/typegoods_items"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="25dp"
+            android:paddingLeft="40px"
+            android:text="@string/typegoods_items"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toStartOf="@+id/editTextTextMultiLine2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/typegoods" />
+
+        <TextView
+            android:id="@+id/typegoods_note"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="50dp"
+            android:paddingLeft="40px"
+            android:text="@string/note"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toStartOf="@+id/typegoodsTextMultiLine"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/typegoods_items" />
+
+        <Button
+            android:id="@+id/btnGoods"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="132dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="132dp"
+            android:backgroundTint="#FF5722"
+            android:text="@string/btnGoods"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/typegoodsTextMultiLine" />
+
+        <EditText
+            android:id="@+id/typegoodsTextMultiLine"
+            android:layout_width="300dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="4dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/typegoods_note"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine2" />
+
+        <EditText
+            android:id="@+id/editTextTextMultiLine2"
+            android:layout_width="300dp"
+            android:layout_height="75dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="4dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/typegoods_items"
+            app:layout_constraintTop_toBottomOf="@+id/typegoodslinearLayout" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>
+</ScrollView>

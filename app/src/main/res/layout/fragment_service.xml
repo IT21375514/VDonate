@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ServiceFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutServices"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/typeservice"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="50dp"
+            android:paddingLeft="40px"
+            android:text="@string/typegoods"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toStartOf="@+id/typeServiceslinearLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/typeServiceslinearLayout"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="4dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/typeservice"
+            app:layout_constraintTop_toTopOf="@+id/typeservice">
+
+            <Spinner
+                android:id="@+id/typeservice_spinner_id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:entries="@array/array4" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/typeservice_note"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="25dp"
+            android:paddingLeft="40px"
+            android:text="@string/note"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toStartOf="@+id/typeServicesTextMultiLine"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/typeservice" />
+
+        <EditText
+            android:id="@+id/typeServicesTextMultiLine"
+            android:layout_width="300dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="4dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/typeservice_note"
+            app:layout_constraintTop_toBottomOf="@+id/typeServiceslinearLayout" />
+
+        <Button
+            android:id="@+id/btnService"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="132dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="132dp"
+            android:backgroundTint="#FF5722"
+            android:text="@string/btnServices"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/typeServicesTextMultiLine" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

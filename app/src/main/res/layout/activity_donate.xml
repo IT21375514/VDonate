@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="#A3D3DC"
+    tools:context=".ActivityDonate">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="75dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/logo_1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/main_menu" />
+
+    <ImageView
+        android:id="@+id/logo_1"
+        android:layout_width="328dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/text_donate"
+        app:layout_constraintEnd_toStartOf="@+id/imageView3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/v_donate" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:background="#443291"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <TextView
+        android:id="@+id/text_donate"
+        android:layout_width="410dp"
+        android:layout_height="31dp"
+        android:text="Donate"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView3"
+        app:layout_constraintHorizontal_bias="0.012"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_donate">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnfood"
+                android:layout_width="131dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="3dp"
+                android:backgroundTint="#A3D3DC"
+                android:text="@string/food"
+                android:textColor="#050505" />
+
+            <Button
+                android:id="@+id/btngoods"
+                android:layout_width="131dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="3dp"
+                android:backgroundTint="@color/white"
+                android:text="@string/unselgoods"
+                android:textColor="#050505" />
+
+            <Button
+                android:id="@+id/btnservice"
+                android:layout_width="131dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="3dp"
+                android:layout_marginEnd="3dp"
+                android:backgroundTint="@color/white"
+                android:text="@string/unselservice"
+                android:textColor="#050505" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="464dp"
+            android:orientation="vertical">
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragmentContainerView5"
+                android:name="com.example.myproject.FoodFragment"
+                android:layout_width="wrap_content"
+                android:layout_height="466dp"
+                tools:layout="@layout/fragment_food" />
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
